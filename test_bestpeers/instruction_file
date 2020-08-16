@@ -1,0 +1,44 @@
+after clone please follow following tasks
+
+1)create virtualenv enivorment 
+virtualenv -p python3.7 env
+
+
+2)cd test_bestpeers
+
+3)install requirement
+pip install -r requirement.txt
+
+
+4)run migrations
+python manage.py migrate crud
+
+5)run server
+python manage.py runserver
+
+6)open postman
+    6.1)use Get HTTP method to see all the todolist are:-
+    url : - http://localhost:8000/api/todolist/
+
+    6.2)for creating new todo list instance used the Post HTTP method
+    and then use on the body section add these values which is given below
+    
+    key                           values
+    title                         title
+    descripation                  descripation
+    status                        Not Started
+
+    6.3)For updating any instance todolist use Put HTTP method and pass the
+    id alongwith the url 
+    url :- http://localhost:8000/api/todolist/pk/ 
+    pk is key and update the similarly just like the post method way
+
+    key                       values
+    title                         title
+    descripation                  descripation
+    status                        Not Started
+
+    6.4)For deleting any instance use Delete HTTP method and pass the id alongwith
+    with the url 
+    url:- http://localhost:8000/api/todolist/pk/
+    pk is key
